@@ -1,0 +1,39 @@
+1.docker-compose.ymlの作成
+
+2.コンテナの中に入ってreactプロジェクトを作成
+参考サイト:https://melheaven.hatenadiary.jp/entry/flask-CRA
+
+3.コンテナに入ってreact routerの導入
+npm install react-router-dom
+
+4.tailwindの導入
+必要なライブラリを導入
+npm install -D tailwindcss postcss autoprefixer
+設定ファイルの作成
+npx tailwindcss init -p
+tailwind.config.jsの「content」を以下を修正
+content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+
+./src/index.cssに以下を追加
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+5.healess uiの導入
+npm install @headlessui/react
+
+6.axiosの導入
+npm install axios
+
+7.prettierの導入
+npm install prettier --save-dev
+
+reactプロジェクトのルートに.prettierrcを作成
+
+整形の実行
+npm run prettier-format
+
+8.recoilの導入
+npm install recoil
